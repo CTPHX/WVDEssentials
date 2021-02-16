@@ -31,12 +31,12 @@ $StartTime = (Get-Date "07:00:00").AddDays(1)
 [System.DayOfWeek[]]$WeekendDay = @([System.DayOfWeek]::Sunday)
 New-AzAutomationSchedule -AutomationAccountName $AutomationAccount -Name "Ring1Shutdown" -StartTime $StartTime -DayOfWeekOccurrence 'Second' -DayOfWeek 'Sunday' -MonthInterval '1' -ResourceGroupName $ResourceGroup
 
-#Create Schedule for WVD Ring 1 Startup
+#Create Schedule for WVD Ring 2 Startup
 $StartTime = (Get-Date "01:00:00").AddDays(1)
 [System.DayOfWeek[]]$WeekendDay = @([System.DayOfWeek]::Sunday)
 New-AzAutomationSchedule -AutomationAccountName $AutomationAccount -Name "Ring2Startup" -StartTime $StartTime -DayOfWeekOccurrence 'Fourth' -DayOfWeek 'Sunday' -MonthInterval '1' -ResourceGroupName $ResourceGroup
 
-#Create Schedule for WVD Ring 1 Shutdown
+#Create Schedule for WVD Ring 2 Shutdown
 $StartTime = (Get-Date "07:00:00").AddDays(1)
 [System.DayOfWeek[]]$WeekendDay = @([System.DayOfWeek]::Sunday)
 New-AzAutomationSchedule -AutomationAccountName $AutomationAccount -Name "Ring2Shutdown" -StartTime $StartTime -DayOfWeekOccurrence 'Fourth' -DayOfWeek 'Sunday' -MonthInterval '1' -ResourceGroupName $ResourceGroup
