@@ -1,4 +1,5 @@
 #Please import AZ.Accounts & Az.Automation into your AZ Automation Account
+#Please see for more infomration https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/New-AzAutomationSchedule.md
 
 #Variables
 $ResourceGroup = 'XXXXXX'
