@@ -14,7 +14,7 @@ $AzureContext = Set-AzContext -SubscriptionId $ServicePrincipalConnection.Subscr
 
 Start-AzAutomationRunbook `
     –AutomationAccountName 'NAME-HERE' `
-    –Name '-Path \\server\share -Recurse -LogFilePath C:\MyLogFile.csv' `
+    –Name 'Invoke-FslShrinkDisk' `
     -ResourceGroupName 'RG HERE' `
     -AzContext $AzureContext `
     –Parameters -Path \\SERVER\SHARE -Recurse
